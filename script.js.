@@ -1,0 +1,12 @@
+// Placeholder for featured artwork slider
+let gallery = document.querySelectorAll('.gallery img');
+let index = 0;
+
+function rotateGallery() {
+  gallery.forEach((img, i) => img.style.display = 'none');
+  gallery[index].style.display = 'block';
+  index = (index + 1) % gallery.length;
+}
+
+setInterval(rotateGallery, 3000);
+rotateGallery();
